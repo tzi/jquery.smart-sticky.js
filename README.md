@@ -4,6 +4,14 @@ jquery.smart-sticky.js
 An easy-to-use script for sticky element. 
 
 
+Install
+-------
+
+```sh
+npm install jquery.smart-sticky.js
+```
+
+
 How to Contribute
 --------
 
