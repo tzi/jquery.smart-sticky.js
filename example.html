@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>jquery.selectivo.js example</title>
+    <meta name="viewport" content="initial-scale=1">
+</head>
+<body style="height: 5000px; margin: 500px 0 200vh; border-bottom: 1px solid lightblue; position: relative;">
+    <div class="sticky" style="height: 150vh; width: 50px; background: linear-gradient(to bottom, #333, red); position: absolute; top: 200px; right: 145px;"></div>
+    <div class="sticky" style="height: 50px; width: 50px; background: #333; float: right; margin-top: 300px"></div>
+    <div class="sticky" style="height: 50px; width: 50px; background: #333; margin-left: 200px; margin-top: 200px"></div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jquery.smart-sticky.js"></script>
+    <script>
+        $(function(){
+            $('.sticky').smartSticky();
+        })
+    </script>
+</body>
+</html>
