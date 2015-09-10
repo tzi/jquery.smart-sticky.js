@@ -1,7 +1,7 @@
 jquery.smart-sticky.js
 ======
 
-A script for sticky element. 
+An easy-to-use script for sticky element. 
 
 
 How to Contribute

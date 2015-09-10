@@ -1,0 +1,24 @@
+{
+  "name": "jquery.smartsticky.js",
+  "version": "1.0.0",
+  "description": "An easy-to-use script for sticky element",
+  "main": "jquery.smart-sticky.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzi/jquery.smartsticky.js.git"
+  },
+  "keywords": [
+    "sticky",
+    "scroll",
+    "fixed"
+  ],
+  "author": "Thomas ZILLIOX (http://tzi.fr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tzi/jquery.smartsticky.js/issues"
+  },
+  "homepage": "https://github.com/tzi/jquery.smartsticky.js#readme"
+}
