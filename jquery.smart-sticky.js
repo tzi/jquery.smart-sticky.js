@@ -9,9 +9,8 @@
       var $container = $(this).parent();
       var formerStyles = $(this).css(['position', 'top', 'margin-top', 'left', 'margin-left', 'right', 'margin-right', 'bottom', 'margin-bottom']);
       var formerPosition = $element.offset();
-      var destinationTop = $container.outerHeight() - $element.height();
       var triggerUp = formerPosition.top;
-      var triggerDown = $container.offset().top + destinationTop;
+      var triggerDown = $container.offset().top + $container.outerHeight() - $element.height();
 
       if ($container.css('position') == 'static') {
         $container.css('position', 'relative');
@@ -31,16 +30,18 @@
         relativePos.isDown = pos >= triggerDown;
         relativePos.isIn   = !relativePos.isUp && !relativePos.isDown;
 
-        if (relativePos.isIn) {
-          scrollEnter();
-        } else if (relativePos.isUp) {
-          scrollUp();
-        } else {
-          scrollDown();
+        if (relativePos.isDown) {
+          scrollDown(pos);
+        } else if (relativePos.isUp != oldRelativePos.isUp || relativePos.isIn != oldRelativePos.isIn) {
+          if (relativePos.isUp) {
+            scrollUp();
+          } else {
+            scrollIn()
+          }
         }
       }
 
-      function scrollEnter() {
+      function scrollIn() {
         $element.css({
           'position': 'fixed',
           'top': 0,
@@ -58,10 +59,10 @@
         $element.css(formerStyles);
       }
 
-      function scrollDown() {
+      function scrollDown(pos) {
         $element.css({
-          'position': 'absolute',
-          'top': destinationTop,
+          'position': 'fixed',
+          'top': triggerDown - pos,
           'left': formerPosition.left,
           'right': 'auto',
           'bottom': 'auto',
